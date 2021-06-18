@@ -2,7 +2,7 @@
   {
     "key": 0,
     "range": "$100k-$200k",
-    "popularPlan":"Qualified 20",
+    "popularPlan": "Qualified 20",
     "plans": [
       {
         "planName": "Qualified 20",
@@ -33,9 +33,9 @@
   {
     "key": 1,
     "range": "$200k-$300k",
-    "popularPlan":"Qualified 40",
+    "popularPlan": "Qualified 40",
     "plans": [
-      { 
+      {
         "planName": "Qualified 20",
         "leads": 20,
         "leadPrice": 79,
@@ -64,7 +64,7 @@
   {
     "key": 2,
     "range": "$300k-$400k",
-    "popularPlan":"Qualified 60",
+    "popularPlan": "Qualified 60",
     "plans": [
       {
         "planName": "Qualified 20",
@@ -95,7 +95,7 @@
   {
     "key": 3,
     "range": "$400k-$500k",
-    "popularPlan":"Qualified 20",
+    "popularPlan": "Qualified 20",
     "plans": [
       {
         "planName": "Qualified 20",
@@ -126,7 +126,7 @@
   {
     "key": 4,
     "range": "$500k+",
-    "popularPlan":"Qualified 40",
+    "popularPlan": "Qualified 40",
     "plans": [
       {
         "planName": "Qualified 20",

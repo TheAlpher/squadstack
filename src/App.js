@@ -1,8 +1,8 @@
-import PricingPage from './views/pricingPage.jsx';
+import PricingPage from "./views/pricingPage.jsx";
 function App() {
   return (
     <div className="App">
-      <PricingPage/>
+      <PricingPage />
     </div>
   );
 }
