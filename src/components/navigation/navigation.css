@@ -1,0 +1,32 @@
+.nav--tab {
+  padding: 1.3em 1.7em;
+  font-size: 1.3em;
+  color: rgb(90 111 144);
+  text-align: center;
+  background: rgb(235, 235, 235);
+  font-weight: 500;
+}
+.nav--wrapper {
+  margin: 2rem 4rem;
+}
+.row {
+  border-radius: 7px;
+  overflow: hidden;
+  background-clip: border-box;
+}
+
+@media (min-width: 797px) {
+  .nav--tab:not(:last-child) {
+    border-right: 2px solid rgb(196, 195, 195);
+  }
+}
+@media (max-width: 796px) {
+  .nav--tab {
+    min-width: 100%;
+  }
+}
+
+.nav--tab.active {
+  background: rgb(90 111 144);
+  color: white;
+}

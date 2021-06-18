@@ -1,0 +1,157 @@
+[
+  {
+    "key": 0,
+    "range": "$100k-$200k",
+    "popularPlan":"Qualified 20",
+    "plans": [
+      {
+        "planName": "Qualified 20",
+        "leads": 20,
+        "leadPrice": 69,
+        "platformPrice": 299
+      },
+      {
+        "planName": "Qualified 40",
+        "leads": 40,
+        "leadPrice": 67,
+        "platformPrice": 599
+      },
+      {
+        "planName": "Qualified 60",
+        "leads": 60,
+        "leadPrice": 65,
+        "platformPrice": 699
+      },
+      {
+        "planName": "Qualified 80",
+        "leads": 80,
+        "leadPrice": 63,
+        "platformPrice": 799
+      }
+    ]
+  },
+  {
+    "key": 1,
+    "range": "$200k-$300k",
+    "popularPlan":"Qualified 40",
+    "plans": [
+      { 
+        "planName": "Qualified 20",
+        "leads": 20,
+        "leadPrice": 79,
+        "platformPrice": 299
+      },
+      {
+        "planName": "Qualified 40",
+        "leads": 40,
+        "leadPrice": 77,
+        "platformPrice": 599
+      },
+      {
+        "planName": "Qualified 60",
+        "leads": 60,
+        "leadPrice": 74,
+        "platformPrice": 699
+      },
+      {
+        "planName": "Qualified 80",
+        "leads": 80,
+        "leadPrice": 72,
+        "platformPrice": 799
+      }
+    ]
+  },
+  {
+    "key": 2,
+    "range": "$300k-$400k",
+    "popularPlan":"Qualified 60",
+    "plans": [
+      {
+        "planName": "Qualified 20",
+        "leads": 20,
+        "leadPrice": 99,
+        "platformPrice": 299
+      },
+      {
+        "planName": "Qualified 40",
+        "leads": 40,
+        "leadPrice": 96,
+        "platformPrice": 599
+      },
+      {
+        "planName": "Qualified 60",
+        "leads": 60,
+        "leadPrice": 93,
+        "platformPrice": 699
+      },
+      {
+        "planName": "Qualified 80",
+        "leads": 80,
+        "leadPrice": 90,
+        "platformPrice": 799
+      }
+    ]
+  },
+  {
+    "key": 3,
+    "range": "$400k-$500k",
+    "popularPlan":"Qualified 20",
+    "plans": [
+      {
+        "planName": "Qualified 20",
+        "leads": 20,
+        "leadPrice": 109,
+        "platformPrice": 299
+      },
+      {
+        "planName": "Qualified 40",
+        "leads": 40,
+        "leadPrice": 106,
+        "platformPrice": 599
+      },
+      {
+        "planName": "Qualified 60",
+        "leads": 60,
+        "leadPrice": 102,
+        "platformPrice": 699
+      },
+      {
+        "planName": "Qualified 80",
+        "leads": 80,
+        "leadPrice": 99,
+        "platformPrice": 799
+      }
+    ]
+  },
+  {
+    "key": 4,
+    "range": "$500k+",
+    "popularPlan":"Qualified 40",
+    "plans": [
+      {
+        "planName": "Qualified 20",
+        "leads": 20,
+        "leadPrice": 129,
+        "platformPrice": 299
+      },
+      {
+        "planName": "Qualified 40",
+        "leads": 40,
+        "leadPrice": 125,
+        "platformPrice": 599
+      },
+      {
+        "planName": "Qualified 60",
+        "leads": 60,
+        "leadPrice": 121,
+        "platformPrice": 699
+      },
+      {
+        "planName": "Qualified 80",
+        "leads": 80,
+        "leadPrice": 117,
+        "platformPrice": 799
+      }
+    ]
+  }
+]
