@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col } from "reactstrap";
 import "./navigation.css";
 const Navigation = ({ data, activeTab, updateActiveTab }) => {
@@ -11,7 +11,7 @@ const Navigation = ({ data, activeTab, updateActiveTab }) => {
             onClick={() => {
               updateActiveTab(index);
             }}
-            className={activeTab == index ? "nav--tab active" : "nav--tab"}
+            className={activeTab === index ? "nav--tab active" : "nav--tab"}
           >
             {ele.range}
           </Col>

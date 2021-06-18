@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Col } from "reactstrap";
 import "./pricingCard.css";
 const PricingCard = ({ data, ispopular, openModal }) => {

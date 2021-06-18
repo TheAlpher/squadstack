@@ -9,24 +9,34 @@ import {
   Form,
   FormGroup,
   ModalBody,
-  Button,
 } from "reactstrap";
+import { objToString } from "lib/util";
 import "./planModal.css";
 const PlanModal = ({ modalOpen, selectedPlan, closeModal }) => {
-  // if(!selectedPlan){
-
-  //   closeModal();
-  // }
+  const [heardfrom, setHeardFrom] = useState(null);
   const handleSubmit = (e) => {
-    console.log(e);
-    const formData = new FormData(e.target);
-    for (var [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
     e.preventDefault();
-
-    console.log(formData);
+    const formData = new FormData(e.target);
+    let obj = {};
+    for (var [key, value] of formData.entries()) {
+      if (value) {
+        if (key === "Lead Source") {
+          obj[key] = Array.isArray(obj[key]) ? [...obj[key], value] : [value];
+        } else {
+          obj[key] = value;
+        }
+      }
+    }
     closeModal();
+    setHeardFrom(null);
+    setTimeout(() => {
+      window.alert(objToString(obj));
+    }, 0);
+  };
+
+  const updateCheckbox = (e) => {
+    if (e.target.value === heardfrom) setHeardFrom(null);
+    else setHeardFrom(e.target.value);
   };
 
   return (
@@ -156,36 +166,43 @@ const PlanModal = ({ modalOpen, selectedPlan, closeModal }) => {
                   id="hearSource"
                   name="Heard About Us"
                   value="Google"
+                  onChange={updateCheckbox}
+                  checked={heardfrom === "Google"}
                 />{" "}
-                <Label for="hearSource">Google</Label>
+                <Label>Google</Label>
                 <Input
                   type="checkbox"
-                  id="hearSource"
-                  name="Heard About Us"
+                  id="hearSource1"
                   value="Facebook"
+                  onChange={updateCheckbox}
+                  checked={heardfrom === "Facebook"}
                 />
-                <Label for="hearSource">Facebook</Label>
+                <Label>Facebook</Label>
                 <Input
                   type="checkbox"
-                  id="hearSource"
-                  name="Heard About Us"
+                  id="hearSource2"
                   value="Email"
+                  name="Heard About Us"
+                  onChange={updateCheckbox}
+                  checked={heardfrom === "Email"}
                 />
-                <Label for="hearSource">Email</Label>
+                <Label>Email</Label>
                 <Input
                   type="checkbox"
-                  id="hearSource"
-                  name="Heard About Us"
                   value="Friends"
+                  name="Heard About Us"
+                  onChange={updateCheckbox}
+                  checked={heardfrom === "Friends"}
                 />
-                <Label for="hearSource">Friends</Label>
+                <Label>Friends</Label>
                 <Input
                   type="checkbox"
-                  id="hearSource"
-                  name="Heard About Us"
                   value="Real Closers"
+                  name="Heard About Us"
+                  onChange={updateCheckbox}
+                  checked={heardfrom === "Real Closers"}
                 />
-                <Label for="hearSource">Real Closers</Label>
+                <Label>Real Closers</Label>
               </FormGroup>
             </Row>
             <button type="submit">Submit</button>
