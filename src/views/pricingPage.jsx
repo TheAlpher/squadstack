@@ -3,6 +3,7 @@ import data from "assets/json/data.json";
 import Navigation from "components/navigation";
 import { isValidTab } from "lib/util";
 import PlansTab from "components/plansTab";
+import PlanModal from "components/modals";
 const PricingPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(
@@ -10,8 +11,16 @@ const PricingPage = () => {
       ? localStorage.getItem("activeTab")
       : 2
   );
-  const toggleModal = () => {
-    setModalOpen(!modalOpen);
+
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const openModal = (plan) => {
+    setSelectedPlan(plan);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedPlan(null);
+    setModalOpen(false);
   };
   const updateActiveTab = (index) => {
     setActiveTab(index);
@@ -25,7 +34,16 @@ const PricingPage = () => {
         activeTab={activeTab}
         updateActiveTab={updateActiveTab}
       />
-      <PlansTab activeTabData={data.find((ele) => ele.key == activeTab)} />
+      <PlansTab
+        activeTabData={data.find((ele) => ele.key == activeTab)}
+        setSelectedPlan={setSelectedPlan}
+        openModal={openModal}
+      />
+      <PlanModal
+        modalOpen={modalOpen}
+        closeModal={closeModal}
+        selectedPlan={selectedPlan}
+      />
     </Fragment>
   );
 };

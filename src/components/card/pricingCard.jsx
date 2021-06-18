@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Col } from "reactstrap";
 import "./pricingCard.css";
-const PricingCard = ({ data, ispopular }) => {
+const PricingCard = ({ data, ispopular, openModal }) => {
   let totalPrice = data.leads * data.leadPrice + data.platformPrice;
   return (
     <Col className="plan--card">
@@ -22,7 +22,7 @@ const PricingCard = ({ data, ispopular }) => {
             </div>
             <div className="plan--details--leadValue">
               Qualified Leads Per Month <br />
-              <span>${data.leads}</span>
+              <span>{data.leads}</span>
               <br />
             </div>
             <div className="plan--details--leadMonth">
@@ -40,7 +40,12 @@ const PricingCard = ({ data, ispopular }) => {
         )}
       </div>
 
-      <div className="plan--finalise">
+      <div
+        className="plan--finalise"
+        onClick={() => {
+          openModal(data);
+        }}
+      >
         {" "}
         {data.leadPrice ? "Start Trial" : "Get in Touch"}
       </div>
