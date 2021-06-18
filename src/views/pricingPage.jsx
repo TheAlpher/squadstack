@@ -35,7 +35,7 @@ const PricingPage = () => {
         updateActiveTab={updateActiveTab}
       />
       <PlansTab
-        activeTabData={data.find((ele) => ele.key === activeTab)}
+        activeTabData={data.find((ele) => ele.key === Number(activeTab))}
         setSelectedPlan={setSelectedPlan}
         openModal={openModal}
       />
