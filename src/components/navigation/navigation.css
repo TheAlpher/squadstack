@@ -1,10 +1,11 @@
 .nav--tab {
-  padding: 1.3em 1.7em;
-  font-size: 1.3em;
-  color: rgb(90 111 144);
+  padding: 1.2em 1.7em;
+  font-size: 1.2em;
+  color: rgb(90, 111, 144);
   text-align: center;
   background: rgb(235, 235, 235);
   font-weight: 500;
+  cursor: pointer;
 }
 .nav--wrapper {
   margin: 2rem 4rem;

@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import data from "assets/json/data.json";
 import Navigation from "components/navigation";
 import { isValidTab } from "lib/util";
+import PlansTab from "components/plansTab";
 const PricingPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(
@@ -16,12 +17,16 @@ const PricingPage = () => {
     setActiveTab(index);
     localStorage.setItem("activeTab", index);
   };
+
   return (
-    <Navigation
-      data={data}
-      activeTab={activeTab}
-      updateActiveTab={updateActiveTab}
-    />
+    <Fragment>
+      <Navigation
+        data={data}
+        activeTab={activeTab}
+        updateActiveTab={updateActiveTab}
+      />
+      <PlansTab activeTabData={data.find((ele) => ele.key == activeTab)} />
+    </Fragment>
   );
 };
 
