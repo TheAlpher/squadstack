@@ -11,13 +11,13 @@ import {
   ModalBody,
 } from "reactstrap";
 import { objToString } from "lib/util";
-import "./planModal.css";
+import "./PlanModal.scss";
 const PlanModal = ({ modalOpen, selectedPlan, closeModal }) => {
   const [heardfrom, setHeardFrom] = useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    let obj = {};
+    let obj = { "Plan Name": selectedPlan?.planName };
     for (var [key, value] of formData.entries()) {
       if (value) {
         if (key === "Lead Source") {
@@ -40,15 +40,15 @@ const PlanModal = ({ modalOpen, selectedPlan, closeModal }) => {
   };
 
   return (
-    <Modal isOpen={modalOpen} toggle={closeModal} className={"plan--modal"}>
+    <Modal isOpen={modalOpen} toggle={closeModal} className={"plan-modal"}>
       <ModalHeader toggle={closeModal}>Get Started With SquadVoice</ModalHeader>
       <ModalBody>
-        <div className="plan--modal--plan-title">
+        <div className="plan-modal__plan-title">
           <span>Plan Selected:&nbsp;</span>
           {selectedPlan?.planName}
         </div>
 
-        <div className="plan--modal--form">
+        <div className="plan-modal__form">
           <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label for="cName">Name</Label>

@@ -1,0 +1,86 @@
+.plan-card {
+  text-align: center;
+  margin: 0.5rem 0;
+  .popular {
+    visibility: visible;
+  }
+  &__tag {
+    color: white;
+    background: rgb(238, 90, 54);
+    padding: 0.7em 1.4em;
+    font-size: 1.1em;
+    min-height: 3em;
+    text-align: center;
+    visibility: hidden;
+  }
+  &__title {
+    background: rgb(90, 111, 144);
+    color: white;
+    padding: 0.9em 1.6em;
+    font-size: 1.2em;
+  }
+  &__finalise {
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 0.7em 1.4em;
+    font-size: 1.2em;
+    color: rgb(238, 90, 54);
+    border: 2px solid rgb(238, 90, 54);
+    &:hover {
+      background: rgb(238, 90, 54);
+      color: white;
+    }
+  }
+  &__details {
+    color: rgb(90, 111, 144);
+    &__leadPrice,
+    &__leadValue,
+    &__leadMonth {
+      padding: 0.7em 0;
+      margin: 0 2em;
+      span {
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+    }
+    &__leadPrice {
+      border-bottom: 2px dotted rgb(168, 167, 167);
+      span {
+        font-size: 2.2em;
+      }
+    }
+    &__leadValue {
+      border-bottom: 2px dotted rgb(168, 167, 167);
+    }
+    &__price {
+      background: rgb(90, 111, 144);
+      color: white;
+      padding: 0.7em 1.5em;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+  }
+  &:hover {
+    .plan-card__details {
+      background: rgb(235, 235, 235);
+    }
+  }
+  &:last-child {
+    display: flex;
+    flex-direction: column;
+    .plan-card__details {
+      font-size: 1.5em;
+      min-height: 11.8em;
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      flex-grow: 1;
+      font-weight: 500;
+    }
+  }
+}
+@media (max-width: 796px) {
+  .plan-card {
+    min-width: 100%;
+  }
+}

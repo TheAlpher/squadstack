@@ -1,17 +1,21 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import "./navigation.css";
+import "./Navigation.scss";
 const Navigation = ({ data, activeTab, updateActiveTab }) => {
   return (
-    <div className="nav--wrapper">
-      <Row style={{ margin: 0 }}>
+    <div className="rangeNav">
+      <Row>
         {data.map((ele, index) => (
           <Col
             key={index}
             onClick={() => {
               updateActiveTab(index);
             }}
-            className={Number(activeTab) === index ? "nav--tab active" : "nav--tab"}
+            className={
+              Number(activeTab) === index
+                ? "rangeNav__tab active"
+                : "rangeNav__tab"
+            }
           >
             {ele.range}
           </Col>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import PricingCard from "components/card";
-import "./plansTab.css";
+import PricingCard from "components/Card";
+import "./PlansTab.scss";
 const PlansTab = ({ activeTabData, openModal }) => {
   return (
-    <div className="plans--tab--wrapper">
-      <Row className="plans--row">
+    <div className="plans-tab">
+      <Row className="plans-tab__row">
         {activeTabData.plans.map((plan, index) => {
           return (
             <PricingCard
@@ -17,17 +17,17 @@ const PlansTab = ({ activeTabData, openModal }) => {
           );
         })}
 
-        <Col className="plan--card">
-          <div className={"plan--tag "}></div>
-          <div className="plan--title">
+        <Col className="plan-card">
+          <div className={"plan-card__tag "}></div>
+          <div className="plan-card__title">
             <span> Enterprise </span>
           </div>
-          <div className="plan--details">
+          <div className="plan-card__details">
             Want more than 80 qualified leads per month
           </div>
 
           <div
-            className="plan--finalise"
+            className="plan-card__finalise"
             onClick={() => {
               openModal({ planName: "Enterprise" });
             }}

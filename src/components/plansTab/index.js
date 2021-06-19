@@ -1,2 +1,2 @@
-import PlansTab from "./plansTab";
+import PlansTab from "./PlansTab";
 export default PlansTab;

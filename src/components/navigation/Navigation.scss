@@ -1,0 +1,32 @@
+.rangeNav {
+  margin: 2rem 4rem;
+  > .row {
+    margin: 0;
+    border-radius: 7px;
+    overflow: hidden;
+    background-clip: border-box;
+  }
+  @media (max-width: 796px) {
+    &__tab {
+      min-width: 100%;
+    }
+  }
+  &__tab {
+    padding: 1.2em 1.7em;
+    font-size: 1.2em;
+    color: rgb(90, 111, 144);
+    text-align: center;
+    background: rgb(235, 235, 235);
+    font-weight: 500;
+    cursor: pointer;
+    @media (min-width: 797px) {
+      &:not(:last-child) {
+        border-right: 2px solid rgb(196, 195, 195);
+      }
+    }
+  }
+  &__tab.active {
+    background: rgb(90, 111, 144);
+    color: white;
+  }
+}
