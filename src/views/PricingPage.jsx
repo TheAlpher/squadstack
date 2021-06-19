@@ -13,6 +13,12 @@ const PricingPage = () => {
   );
 
   const [selectedPlan, setSelectedPlan] = useState(null);
+
+/**
+ * Updates {@var selectedPlan} and toggles {@var modalOpen} 
+ * @param {Object} plan 
+ */ 
+  
   const openModal = (plan) => {
     setSelectedPlan(plan);
     setModalOpen(true);
@@ -22,6 +28,11 @@ const PricingPage = () => {
     setSelectedPlan(null);
     setModalOpen(false);
   };
+
+  /**
+   * Updates {@var activeTab} & updates localStorage 
+   * @param {Number} index   value of "key" key of selected home range
+   */
   const updateActiveTab = (index) => {
     setActiveTab(index);
     localStorage.setItem("activeTab", index);

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Col } from "reactstrap";
 import "./PricingCard.scss";
+
 const PricingCard = ({ data, ispopular, openModal }) => {
   let totalPrice = data.leads * data.leadPrice + data.platformPrice;
   return (

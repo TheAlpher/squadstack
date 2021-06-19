@@ -14,10 +14,20 @@ import { objToString } from "lib/util";
 import "./PlanModal.scss";
 const PlanModal = ({ modalOpen, selectedPlan, closeModal }) => {
   const [heardfrom, setHeardFrom] = useState(null);
+
+  /**
+   * Handle form submission (validates using input field attributes)
+   * FormData generates formValues object accessed using entries function
+   * Lead Source name assigned to multi select checkboxes therefore its values need to be concatenated
+   * @param {*Event Object} e 
+   */
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
+
     let obj = { "Plan Name": selectedPlan?.planName };
+
     for (var [key, value] of formData.entries()) {
       if (value) {
         if (key === "Lead Source") {
@@ -33,6 +43,12 @@ const PlanModal = ({ modalOpen, selectedPlan, closeModal }) => {
       window.alert(objToString(obj));
     }, 0);
   };
+
+/**
+ * Updates Heard About Us Checkboxes value based on {@var heardfrom } 
+ * as it is a single select from multiple checkboxes 
+ * @param {*Checbox checked onChange event object} e 
+ */
 
   const updateCheckbox = (e) => {
     if (e.target.value === heardfrom) setHeardFrom(null);
