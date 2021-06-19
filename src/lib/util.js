@@ -1,9 +1,7 @@
 import { validTabKeys } from "./constants";
 
 const isValidTab = (index) => {
-  if (index && validTabKeys.includes(Number(index))) {
-    return true;
-  }
+  if (index && validTabKeys.includes(Number(index))) return true;
   return false;
 };
 
