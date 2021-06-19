@@ -13,8 +13,8 @@ Reactstrap, Bootstrap
 
 ## Assumptions 
 
-1. Every Average Home Range consists of 4 plans as mentioned in the table as well as Enterprise plan visible in UI
-2. Enterprise plan only consists of planName:"Enterprise" and  description:"Want more than 80 qualified leads per month" fields
+1. Every Average Home Range consists of 4 plans as mentioned in the table as well as Enterprise plan visible in UI.
+2. Enterprise plan only consists of planName:"Enterprise" and  description:"Want more than 80 qualified leads per month" fields.
 3. Modal Autofill Plan Data only adds plan name and no of monthly leads.
 4. The no connection page is to be imeplemented using serviceworker.
 
