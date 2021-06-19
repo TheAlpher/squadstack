@@ -1,7 +1,7 @@
 import React from "react";
 import { Row } from "reactstrap";
 import { extraPlan } from "lib/constants";
-import PricingCard from "components/Card";
+import PricingCard from "components/card";
 import "./PlansTab.scss";
 const PlansTab = ({ activeTabData, openModal }) => {
   const getUpdatedDataPlans = (data) => {
