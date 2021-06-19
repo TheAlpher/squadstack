@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from "react";
 import data from "assets/json/data.json";
-import Navigation from "components/Navigation";
+import Navigation from "components/navigation";
 import { isValidTab } from "lib/util";
-import PlansTab from "components/PlansTab";
-import PlanModal from "components/Modals";
+import PlansTab from "components/plansTab";
+import PlanModal from "components/modals";
 const PricingPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(
