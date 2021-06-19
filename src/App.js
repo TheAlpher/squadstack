@@ -1,4 +1,4 @@
-import PricingPage from "./views/pricingPage.jsx";
+import PricingPage from  "./views/PricingPage.jsx";
 function App() {
   return (
     <div className="App">
