@@ -11,7 +11,7 @@ const Navigation = ({ data, activeTab, updateActiveTab }) => {
             onClick={() => {
               updateActiveTab(index);
             }}
-            className={activeTab === index ? "nav--tab active" : "nav--tab"}
+            className={Number(activeTab) === index ? "nav--tab active" : "nav--tab"}
           >
             {ele.range}
           </Col>

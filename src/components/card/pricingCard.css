@@ -11,6 +11,11 @@
   text-align: center;
   margin: 0.5rem 0;
 }
+@media (max-width: 796px) {
+  .plan--card {
+    min-width: 100%;
+  }
+}
 .plan--card:hover .plan--details {
   background: rgb(235, 235, 235);
 }
